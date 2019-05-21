@@ -1,13 +1,13 @@
 package ru.progrm_jarvis.crackshottabcompleter.command.tabcomplete;
 
 import com.shampaggon.crackshot.CSDirector;
-//import com.shampaggon.crackshot.CSMinion;
+import com.shampaggon.crackshot.CSMinion;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
-//import java.lang.reflect.Field;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -17,19 +17,19 @@ import java.util.List;
  */
 public class CrackShotCommandTabCompleter implements TabCompleter {
     private CSDirector csPlugin;
-    //
-    //private CSMinion csMinion;
+    
+    private CSMinion csMinion;
 
     public CrackShotCommandTabCompleter(CSDirector csPlugin) {
         this.csPlugin = csPlugin;
-        /*try {
+        try {
             Field field = csPlugin.getClass().getField("csminion");
             if (CSMinion.class.isAssignableFrom(field.getType())) {
                 this.csMinion = (CSMinion) field.get(csPlugin);
             }
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
-        }*/
+        }
     }
 
     @Override
